@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
     <title>Colour Palette Generator</title>
 </head>
+
 <body>
-    <header>
-        <h1>Colour Palette Generator</h1>
-    </header>
+    <div class="main_container">
+        <header>
+            <h1>Colour Palette Generator</h1>
+        </header>
 
-    <main>
-        <form>
-            <input type="text" placeholder="Enter the theme of colour you want to generate:" autofocus required autocomplete="off" />
-            <input type="submit" />
-        </form>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </main>
+        <main>
+            <form>
+                <input type="text" placeholder="Enter the theme of colour you want to generate:" class="theme" autofocus
+                    required autocomplete="off" />
+                <input type="submit" value="Submit" class="submit" />
+            </form>
 
-    <footer>
-        This was coded by 
-        <a href="https://github.com/kontinew21">Kamenikia Govender</a> and is 
-        <a hre="https://github.com/kontinew21/colour-palette-generator">open-sourced on Github</a> and 
-        <a href="https://c-palette-generator.netlify.app/">hosted by Netlify</a>
-    </footer>
+            <div class="colour_container">
+                <div>
+                    <div class="colour one"></div>
+                    <div class="colour-label">#</div>
+                    <button class="copy-btn">Copy</button>
+                </div>
+                <div>
+                    <div class="colour two"></div>
+                    <div class="colour-label">#</div>
+                    <button class="copy-btn">Copy</button>
+                </div>
+                <div>
+                    <div class="colour three"></div>
+                    <div class="colour-label">#</div>
+                    <button class="copy-btn">Copy</button>
+                </div>
+                <div>
+                    <div class="colour four"></div>
+                    <div class="colour-label">#</div>
+                    <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            This was coded by
+            <a href="https://github.com/kontinew21">Kamenikia Govender</a> and is
+            <a hre="https://github.com/kontinew21/colour-palette-generator">open-sourced on Github</a> and
+            <a href="https://c-palette-generator.netlify.app/">hosted by Netlify</a>
+        </footer>
+    </div>
 
     <script src="index.js"></script>
-    
+
 </body>
+
 </html>
