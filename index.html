@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>Colour Palette Generator</title>
 </head>
@@ -16,7 +18,7 @@
 
         <main>
             <form id="cpalette-generator-form">
-                <input type="text" placeholder="Enter theme of palette:" class="theme" autofocus required
+                <input type="text" placeholder="Enter theme of palette:" class="theme" id="theme" autofocus required
                     autocomplete="off" />
                 <input type="submit" value="Submit" class="submit" />
             </form>
@@ -52,7 +54,6 @@
         </footer>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     <script src="src/index.js"></script>
 
 </body>

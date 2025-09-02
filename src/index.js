@@ -1,7 +1,6 @@
-function generateCPalette(event){
-    event.preventDefault();
-
-    let colours = ["#842D73", "#EE316B", "#FFB137", "#FBDFB6"];
+function displayPalette(response){
+    let answer = response.data.answer;
+    let colours = answer.split("\n");
 
     let colourOneElement = document.querySelector(".one");
     colourOneElement.innerHTML = "";
@@ -22,6 +21,19 @@ function generateCPalette(event){
     colourFourElement.innerHTML = "";
     colourFourElement.style.backgroundColor = colours[3];
     document.querySelector("#label-four").innerHTML = colours[3];
+}
+
+function generateCPalette(event){
+    event.preventDefault();
+    
+    let themes = document.querySelector("#theme");
+    let prompt = `What is a four-colour palette that perfectly represents ${themes.value}`;
+    let context = "Please only include the four hex codes with a hastag in the front of each";
+    let apiKey = "434at24abcb5077obabee921e64ef383";
+    let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+    
+    console.log(apiURL);
+    axios.get(apiURL).then(displayPalette);
 }
 
 let cpaletteFormElement = document.querySelector("#cpalette-generator-form");
