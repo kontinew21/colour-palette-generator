@@ -15,7 +15,7 @@
         </header>
 
         <main>
-            <form>
+            <form id="cpalette-generator-form">
                 <input type="text" placeholder="Enter theme of palette:" class="theme" autofocus required
                     autocomplete="off" />
                 <input type="submit" value="Submit" class="submit" />
@@ -24,23 +24,23 @@
             <div class="colour_container">
                 <div class="colour_panel">
                     <div class="colour one">?</div>
-                    <div class="colour-label">#</div>
-                    <button class="copy-btn">Copy</button>
+                    <div class="colour-label" id="label-one">#</div>
+                    <button class="copy-btn" data-clipboard-target="#label-one">Copy</button>
                 </div>
                 <div class="colour_panel">
                     <div class="colour two">?</div>
-                    <div class="colour-label">#</div>
-                    <button class="copy-btn">Copy</button>
+                    <div class="colour-label" id="label-two">#</div>
+                    <button class="copy-btn" data-clipboard-target="#label-two">Copy</button>
                 </div>
                 <div class="colour_panel">
                     <div class="colour three">?</div>
-                    <div class="colour-label">#</div>
-                    <button class="copy-btn">Copy</button>
+                    <div class="colour-label" id="label-three">#</div>
+                    <button class="copy-btn" data-clipboard-target="#label-three">Copy</button>
                 </div>
                 <div class="colour_panel">
                     <div class="colour four">?</div>
-                    <div class="colour-label">#</div>
-                    <button class="copy-btn">Copy</button>
+                    <div class="colour-label" id="label-four">#</div>
+                    <button class="copy-btn" data-clipboard-target="#label-four">Copy</button>
                 </div>
             </div>
         </main>
@@ -52,7 +52,8 @@
         </footer>
     </div>
 
-    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script src="src/index.js"></script>
 
 </body>
 
