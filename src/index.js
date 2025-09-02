@@ -50,7 +50,7 @@ let show = function() {
     jSuites.loading.show();
     setTimeout(function() {
         jSuites.loading.hide();
-    }, 2000);
+    }, 3500);
 }
 showbtn.onclick = () => show();
 
