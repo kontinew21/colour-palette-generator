@@ -32,11 +32,26 @@ function generateCPalette(event){
     let apiKey = "434at24abcb5077obabee921e64ef383";
     let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     
+    let colourElement = document.querySelector(".colour_container");
+    colourElement.classList.remove("hidden");
+
+    let smallElement = document.querySelector("small");
+    smallElement.style.paddingBottom = "10px";
+
+
     console.log(apiURL);
     axios.get(apiURL).then(displayPalette);
 }
 
 let cpaletteFormElement = document.querySelector("#cpalette-generator-form");
 cpaletteFormElement.addEventListener("submit", generateCPalette);
+
+let show = function() {
+    jSuites.loading.show();
+    setTimeout(function() {
+        jSuites.loading.hide();
+    }, 2000);
+}
+showbtn.onclick = () => show();
 
 let clipboard = new ClipboardJS('.copy-btn');

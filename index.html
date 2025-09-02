@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://jsuites.net/v5/jsuites.js"></script>
+    <link rel="stylesheet" href="https://jsuites.net/v5/jsuites.css" type="text/css" />
     <link rel="stylesheet" href="src/style.css">
     <title>Colour Palette Generator</title>
 </head>
@@ -18,29 +20,31 @@
 
         <main>
             <form id="cpalette-generator-form">
-                <input type="text" placeholder="Enter theme of palette:" class="theme" id="theme" autofocus required
-                    autocomplete="off" />
-                <input type="submit" value="Submit" class="submit" />
+                <input type="text" placeholder="Enter theme of your palette:" class="theme" id="theme" autofocus
+                    required autocomplete="off" />
+                <input type="submit" value="Submit" class="submit jbutton dark" id='showbtn'/>
             </form>
 
-            <div class="colour_container">
+            <small>i.e. Love, Fire, Ocean... etc.</small>
+
+            <div class="colour_container hidden">
                 <div class="colour_panel">
-                    <div class="colour one">?</div>
+                    <div class="colour one"></div>
                     <div class="colour-label" id="label-one">#</div>
                     <button class="copy-btn" data-clipboard-target="#label-one">Copy</button>
                 </div>
                 <div class="colour_panel">
-                    <div class="colour two">?</div>
+                    <div class="colour two"></div>
                     <div class="colour-label" id="label-two">#</div>
                     <button class="copy-btn" data-clipboard-target="#label-two">Copy</button>
                 </div>
                 <div class="colour_panel">
-                    <div class="colour three">?</div>
+                    <div class="colour three"></div>
                     <div class="colour-label" id="label-three">#</div>
                     <button class="copy-btn" data-clipboard-target="#label-three">Copy</button>
                 </div>
                 <div class="colour_panel">
-                    <div class="colour four">?</div>
+                    <div class="colour four"></div>
                     <div class="colour-label" id="label-four">#</div>
                     <button class="copy-btn" data-clipboard-target="#label-four">Copy</button>
                 </div>
@@ -49,7 +53,7 @@
         <footer>
             This was coded by
             <a href="https://github.com/kontinew21">Kamenikia Govender</a> and is
-            <a hre="https://github.com/kontinew21/colour-palette-generator">open-sourced on Github</a> and
+            <a href="https://github.com/kontinew21/colour-palette-generator">open-sourced on Github</a> and
             <a href="https://c-palette-generator.netlify.app/">hosted by Netlify</a>
         </footer>
     </div>
